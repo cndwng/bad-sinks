@@ -105,17 +105,12 @@ body {
    ============================ */
 
 .section-break {
-  padding: 0 2rem 5rem;
+  padding: 5rem 2rem;
   text-align: center;
   background: var(--white);
   border-top: 3px solid var(--black);
   border-bottom: 3px solid var(--black);
-  margin: var(--section-gap) 0;
-}
-
-/* First break sits flush against the hero */
-.section-break.first-break {
-  margin-top: 0;
+  margin: 0 0 var(--section-gap);
 }
 
 .section-break h2 {
@@ -285,7 +280,7 @@ body {
 
 .pull-quote {
   max-width: var(--max-width);
-  margin: 0 auto;
+  margin: 0 auto var(--section-gap);
   padding: 4rem 3rem;
   background: var(--black);
   color: var(--white);
@@ -401,20 +396,13 @@ body {
   font-size: 1.1rem;
   line-height: 1.75;
   margin-bottom: 1.1rem;
-  font-style: italic;
 }
 
 .email-link {
-  display: inline-block;
-  margin-top: 1.5rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
   color: var(--black);
   text-decoration: none;
   border-bottom: 2px solid var(--black);
-  padding-bottom: 2px;
-  font-style: normal;
+  padding-bottom: 1px;
 }
 
 .email-link:hover {
@@ -437,9 +425,9 @@ body {
 .appendix-header {
   max-width: var(--max-width);
   margin: 0 auto 3rem;
-  padding: 0 2rem;
+  padding: 2rem 2rem;
+  border-top: 3px solid var(--black);
   border-bottom: 3px solid var(--black);
-  padding-bottom: 2rem;
 }
 
 .appendix-header h2 {
@@ -509,5 +497,5 @@ footer a {
 
 @media (max-width: 500px) {
   .pull-quote { padding: 3rem 1.5rem; }
-  .section-break { padding: 0 1.5rem 3rem; }
+  .section-break { padding: 3rem 1.5rem; }
 }

@@ -30,17 +30,17 @@
   </section>
 
   <!-- PART I: DESIGN — section break, immediately after hero -->
-  <div class="section-break first-break" id="design">
+  <div class="section-break" id="design">
     <h2>Part I:<br>Design</h2>
   </div>
 
   <!-- INTRO — who I am, why I made this -->
   <div class="content-block">
-    <p>I'm a product designer. I spend most of my working hours thinking about how digital interfaces communicate with people — what a button should look like, whether a flow makes sense, how to make software feel obvious to use.</p>
+    <p>I’m a product designer. I spend most of my working hours thinking about how digital interfaces communicate with people — what a button should look like, whether a flow makes sense, how to make software feel obvious to use.</p>
     <p>The physical world is a whole different story. Nobody redesigns the faucet every sprint. Bad physical design just sits there, permanently, being bad, forever.</p>
-    <p>Sinks in particular have been a low-key obsession of mine for years. After reading <em>The Design of Everyday Things</em> (more on that in a second), I started photographing bad sinks everywhere I went. Bathroom at a bar? Photographed. Museum restroom? Photographed. My optometrist's office? You already know.</p>
+    <p>Sinks in particular have been a low-key obsession of mine for years. After reading <em>The Design of Everyday Things</em> (more on that in a second), I started photographing bad sinks everywhere I went. Bathroom at a bar? Photographed. Museum restroom? Photographed. My optometrist’s office? You already know.</p>
     <p>This is what I found.</p>
-    <p class="lead-in">with all of that out of the way, let's get started.</p>
+    <p class="lead-in">with all of that out of the way, let’s get started.</p>
   </div>
 
   <!-- DESIGN ≠ ART — moved here -->
@@ -53,10 +53,9 @@
     <div class="content-two-col">
       <div class="text-col">
         <h3>The Design of Everyday Things</h3>
-        <p>For those who don't know: <em>The Design of Everyday Things</em> by Don Norman was originally published in 1988 under the more accurate title <em>The Psychology of Everyday Things</em>. Norman — a cognitive scientist who's had stints at Apple and UC San Diego — uses cognitive psychology to explain why some things are intuitive and others are inexplicably infuriating.</p>
-        <p>The book introduced (or at least popularized) the concept of <strong>affordances</strong> — the idea that objects communicate how they want to be used. A push plate says push. A door handle says pull. When the signal and the correct action don't match, you get bad design. It also introduced concepts like <strong>feedback</strong>, <strong>constraints</strong>, and <strong>mappings</strong> — all the invisible grammar of how objects talk to people.</p>
-        <p>Most importantly, it popularized <strong>user-centered design</strong>: the principle that if you can't figure out how to use something, it's not your fault. The design failed you.</p>
-        <p>It's been a standard design textbook for decades. I read it for two different college courses. Don Norman is basically Design Daddy.</p>
+        <p>For those who don’t know: <em>The Design of Everyday Things</em> by Don Norman was originally published in 1988 under the more accurate title <em>The Psychology of Everyday Things</em>. Norman — a cognitive scientist who’s had stints at Apple and UC San Diego — uses cognitive psychology to explain why some things are intuitive and others are inexplicably infuriating.</p>
+        <p>Most importantly, it popularized <strong>user-centered design</strong>: the principle that if you can’t figure out how to use something, it’s not your fault. The design failed you.</p>
+        <p>It’s been a standard design textbook for decades. I read it for two different college courses. Don Norman is basically Design Daddy.</p>
       </div>
       <div class="image-col">
         <img src="../assets/slide-02-book.png" alt="The Design of Everyday Things book cover" />
@@ -64,12 +63,17 @@
     </div>
   </div>
 
+  <!-- AFFORDANCES — lead-in to Norman doors -->
+  <div class="content-block">
+    <p>The book introduced (or at least popularized) the concept of <strong>affordances</strong> — the idea that objects communicate how they want to be used. A push plate says push. A door handle says pull. When the signal and the correct action don’t match, you get bad design.</p>
+  </div>
+
   <!-- NORMAN DOORS — dictionary definition style -->
   <div class="definition-block">
     <div class="def-term">Norman door</div>
     <div class="def-pronunciation">noun &nbsp;/ˈnɔːr·mən dɔːr/</div>
     <p class="def-body">A door that gives the wrong signal about how to interact with it — most commonly, a door that should be pushed but has a pull handle, or vice versa. The visual cue (the handle) contradicts the correct action (push), so users repeatedly choose wrong. Then feel embarrassed about it. Even though it is not their fault.</p>
-    <p class="def-origin">Named after Don Norman, who used poorly designed doors as a central example in <em>The Design of Everyday Things</em>. If a door needs a sign that says "PUSH," it is a Norman door.</p>
+    <p class="def-origin">Named after Don Norman, who used poorly designed doors as a central example in <em>The Design of Everyday Things</em>. If a door needs a sign that says “PUSH,” it is a Norman door.</p>
     <div class="def-image">
       <img src="../assets/slide-06-norman-doors.png" alt="Example of a Norman door" />
     </div>
@@ -99,7 +103,7 @@
 
   <div class="content-block">
     <h3>The Anatomy of a Sink</h3>
-    <p>Every sink can be broken into five components worth evaluating: <strong>Faucets</strong>, <strong>Water</strong>, <strong>Basins</strong>, <strong>The Surroundings</strong>, and <strong>The Innards</strong> (I'm not a plumber, I don't care).</p>
+    <p>Every sink can be broken into five components worth evaluating: <strong>Faucets</strong>, <strong>Water</strong>, <strong>Basins</strong>, <strong>The Surroundings</strong>, and <strong>The Innards</strong> (I’m not a plumber, I don’t care).</p>
   </div>
   <div class="slide-card">
     <img src="../assets/slide-10-anatomy.png" alt="Diagram labeling the anatomy of a sink" />
@@ -131,7 +135,7 @@
 
   <div class="content-block">
     <h3>Basins: Bad Shapes</h3>
-    <p>Bad basin design is everywhere. Hard angles are hard to clean. Too-small basins are useless. Gross stuff collects in the bottom when there's no slope toward the drain.</p>
+    <p>Bad basin design is everywhere. Hard angles are hard to clean. Too-small basins are useless. Gross stuff collects in the bottom when there’s no slope toward the drain.</p>
   </div>
   <div class="slide-card">
     <img src="../assets/slide-12-bad-shapes.png" alt="Examples of bad basin shapes" />
@@ -171,8 +175,8 @@
       <div class="text-col">
         <h3>Push Down Faucets</h3>
         <p>I feel like I mostly see these in rest stops and schools.</p>
-        <p><strong>Pros:</strong> You don't have to turn it off. Mechanical trigger (not reliant on a sensor). Wastes less water.</p>
-        <p><strong>Cons:</strong> They are literally never set up correctly. They are on for about 4.5 seconds — just long enough for you to soap up and get the whole thing soapy and wet when you push it again.</p>
+        <p><strong>Pros:</strong> You don’t have to turn it off. Mechanical trigger (not reliant on a sensor). Wastes less water.</p>
+        <p><strong>Cons:</strong> They are literally never set up correctly. They are on for about 0.3 seconds — just long enough for you to soap up and get the whole thing soapy and wet when you push it again.</p>
       </div>
       <div class="image-col">
         <img src="../assets/slide-15-push-down.png" alt="Push down faucets" />
@@ -184,7 +188,7 @@
     <div class="content-two-col">
       <div class="text-col">
         <h3>Automatic Sensors</h3>
-        <p><strong>Pros:</strong> Wastes less water. Feel high tech. Don't have to touch a dirty handle.</p>
+        <p><strong>Pros:</strong> Wastes less water. Feel high tech. Don’t have to touch a dirty handle.</p>
         <p><strong>Cons:</strong> Also often not set up correctly. Some of them are impossible to trigger. The on-time is sometimes too short. No temp control.</p>
       </div>
       <div class="image-col">
@@ -235,7 +239,7 @@
     <div class="content-two-col image-left">
       <div class="text-col">
         <h3>A Bad Example</h3>
-        <p>This is a bar bathroom sink (the pointy one from earlier). It literally wasn't designed to have space for your hand to get soap. Context-blind design at its finest.</p>
+        <p>This is a bar bathroom sink (the pointy one from earlier). It literally wasn’t designed to have space for your hand to get soap. Context-blind design at its finest.</p>
       </div>
       <div class="image-col">
         <img src="../assets/slide-19-surroundings-bad.png" alt="Bar bathroom sink with no space for soap" />
@@ -244,13 +248,13 @@
   </div>
 
   <!-- CASE STUDIES -->
-  <div class="section-break yellow" id="cases">
-    <h2>Let's go through some sinks</h2>
+  <div class="section-break yellow" id="cases" style="margin-bottom: 0">
+    <h2>Let’s go through some sinks</h2>
   </div>
 
   <div class="pull-quote">
     <p>The most offensive sink design error:</p>
-    <p class="sub">When your hand is too close to the back of the sink and you can't actually open your hands to scrub — and then your fist bumps the back of the dirty sink.</p>
+    <p class="sub">When your hand is too close to the back of the sink and you can’t actually open your hands to scrub — and then your fist bumps the back of the dirty sink.</p>
   </div>
 
   <div class="content-block">
@@ -260,7 +264,7 @@
 
   <div class="sink-series">
     <h3>Consider: This Sink</h3>
-    <p>Let's evaluate.</p>
+    <p>Let’s evaluate.</p>
     <div class="sink-img-stack">
       <img src="../assets/slide-22-consider.png" alt="A sink to evaluate" />
       <img src="../assets/slide-22-annotated.png" alt="The same sink with design annotations" />
@@ -277,7 +281,7 @@
   </div>
 
   <div class="sink-series">
-    <h3>Consider: My Optometrist's Sink</h3>
+    <h3>Consider: My Optometrist’s Sink</h3>
     <ul>
       <li>Basin + faucet combo is maybe a size mismatch</li>
       <li>Maybe faucet is a teeny bit too close to the back</li>
@@ -304,8 +308,7 @@
   <div class="closing-block" id="closing">
     <p>basically, almost nobody who designed a sink has ever used one for more than 30 seconds. and nobody who specced the placement has ever had to clean it. almost everyone gets it wrong.</p>
     <p>sorry if i ruined sinks for you.</p>
-    <p>if you see a sink — good or bad — please send it to me.</p>
-    <a href="mailto:cindy@cndwng.com?subject=bad%20sink" class="email-link">send a sink pic →</a>
+    <p>if you see a sink — good or bad — please <a href="mailto:cindy@cndwng.com?subject=bad%20sink" class="email-link">send it to me</a>.</p>
   </div>
 
   <!-- APPENDIX -->
@@ -337,8 +340,8 @@
     <div class="content-block">
       <div class="content-two-col image-left">
         <div class="text-col">
-          <h3>Appendix B: My Friend's Smart House</h3>
-          <p>??? 'nuff said.</p>
+          <h3>Appendix B: My Friend’s Smart House</h3>
+          <p>??? ‘nuff said.</p>
         </div>
         <div class="image-col">
           <img src="../assets/slide-28-smart-house.png" alt="Confusing smart house controls" />
