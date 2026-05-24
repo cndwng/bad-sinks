@@ -88,16 +88,59 @@ body {
 
 .hero {
   background: var(--yellow);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  position: relative;
+  /* min-height matches 16:9 so lockup text gives the hero size when image is missing */
+  min-height: 56.25vw;
 }
 
+.hero-lockup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 56.25vw;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero-eyebrow {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.hero-title em {
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.hero-byline {
+  font-size: clamp(0.9rem, 2vw, 1.3rem);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+/* Covers the lockup when the image loads; yellow background fills any letterbox bars */
 .hero-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  max-width: 100%;
-  display: block;
+  height: 100%;
+  object-fit: contain;
+  background: var(--yellow);
+  z-index: 2;
 }
 
 /* ============================
@@ -111,6 +154,12 @@ body {
   border-top: 3px solid var(--black);
   border-bottom: 3px solid var(--black);
   margin: 0 0 var(--section-gap);
+}
+
+/* Collapse the gap when two section breaks appear consecutively */
+.section-break + .section-break {
+  margin-top: calc(-1 * var(--section-gap));
+  border-top: none;
 }
 
 .section-break h2 {
