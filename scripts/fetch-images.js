@@ -1,11 +1,12 @@
 #!/usr/bin/env node
-// Fetches slide screenshots from the Figma REST API and writes them to assets/.
-// Requires FIGMA_ACCESS_TOKEN env var (Figma personal access token).
+// Fetches slide screenshots from the Figma REST API, optimizes them, and
+// writes them to assets/. Requires FIGMA_ACCESS_TOKEN env var.
 // Usage: node scripts/fetch-images.js
 
 const https = require('https');
 const fs = require('fs');
 const path = require('path');
+const sharp = require('sharp');
 
 const FILE_KEY = 'UFtePmUoUwoI8rugK0nFNp';
 const TOKEN = process.env.FIGMA_ACCESS_TOKEN;
@@ -72,10 +73,13 @@ async function fetchImageUrls(nodeIds) {
   return data.images;
 }
 
-async function downloadImage(url, dest) {
+async function downloadAndOptimize(url, dest) {
   const { status, body } = await get(url);
   if (status !== 200) throw new Error(`Download failed ${status} for ${url}`);
-  fs.writeFileSync(dest, body);
+  await sharp(body)
+    .resize({ width: 1600, withoutEnlargement: true })
+    .png({ compressionLevel: 9, effort: 10 })
+    .toFile(dest);
 }
 
 async function main() {
@@ -97,8 +101,8 @@ async function main() {
         continue;
       }
       const dest = path.join(ASSETS_DIR, slide.file);
-      process.stdout.write(`  Downloading ${slide.file}... `);
-      await downloadImage(imageUrl, dest);
+      process.stdout.write(`  ${slide.file}... `);
+      await downloadAndOptimize(imageUrl, dest);
       const size = fs.statSync(dest).size;
       console.log(`${(size/1024).toFixed(0)}KB`);
     }

@@ -1,0 +1,10 @@
+{
+  "name": "bad-sinks",
+  "private": true,
+  "scripts": {
+    "fetch": "node scripts/fetch-images.js"
+  },
+  "dependencies": {
+    "sharp": "^0.33.0"
+  }
+}
