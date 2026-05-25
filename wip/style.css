@@ -156,11 +156,6 @@ body {
   margin: 0 0 var(--section-gap);
 }
 
-/* Collapse the gap when two section breaks appear consecutively */
-.section-break + .section-break {
-  margin-top: calc(-1 * var(--section-gap));
-  border-top: none;
-}
 
 .section-break h2 {
   font-size: clamp(2.5rem, 7vw, 5rem);
@@ -328,8 +323,8 @@ body {
    ============================ */
 
 .pull-quote {
-  max-width: var(--max-width);
-  margin: 0 auto var(--section-gap);
+  width: 100%;
+  margin: 0 0 var(--section-gap);
   padding: 4rem 3rem;
   background: var(--black);
   color: var(--white);
